@@ -4,36 +4,132 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>XAAXAXAXXAXAXAXAXAXAXAXXXAXAX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="page-container">
-      <header>
-        <h1>XAAXAXAXXAXAXAXAXAXAXAXXXAXAX</h1>
-        <p>Добро пожаловать на стартовую страницу вашего сайта.</p>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand">
+          <span>XAAXAXAXAXAXAXAXAXAXAXAXXXAXAX</span>
+        </div>
+        <nav class="site-nav">
+          <a href="#about">О нас</a>
+          <a href="#features">Фишки</a>
+          <a href="#work">Портфолио</a>
+          <a href="#contact">Контакты</a>
+        </nav>
       </header>
 
       <main>
-        <section class="hero">
-          <h2>Начните здесь</h2>
-          <p>
-            Это простой шаблон для сайта. Вы можете изменить текст, добавить
-            изображения, разделы и оформить страницу по своему желанию.
-          </p>
-          <a class="button" href="#about">Оформлю сам</a>
+        <section class="hero-panel">
+          <div class="hero-copy">
+            <p class="eyebrow">Сайт уже в готовом виде</p>
+            <h1>Простой красивый старт под ваш ник</h1>
+            <p>Полностью адаптивная страница с тёмным оформлением, секциями для материалов и прямой страницей по нику.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#about">Начать сейчас</a>
+              <a class="button button-secondary" href="/XAXAXAXAXAXAXAXA/">Страница по нику</a>
+            </div>
+          </div>
+          <div class="hero-card">
+            <div class="hero-card-inner">
+              <span class="card-tag">XAAXAXAXAXAXAXAXA</span>
+              <h2>Ваш ник. Ваш стиль. Ваш сайт.</h2>
+              <p>Делайте страницу, добавляйте блоки и публикуйте. Всё работает уже сейчас.</p>
+            </div>
+          </div>
         </section>
 
-        <section id="about">
-          <h3>Что дальше</h3>
-          <p>
-            Добавьте сюда ваши блоки с информацией, портфолио, контакты и другие
-            элементы. Сайт уже готов к размещению и публикации.
-          </p>
+        <section id="about" class="section-block">
+          <div class="section-heading">
+            <span>О сайте</span>
+            <h2>Почему это лучше чем простой redirect</h2>
+          </div>
+          <div class="section-grid">
+            <article class="feature-card">
+              <h3>Формат</h3>
+              <p>Делайте сайт сразу в HTML/CSS, без лишних библиотек и сторонних сервисов.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Скорость</h3>
+              <p>Легкий и быстрый, загружается мгновенно на любом устройстве.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Контроль</h3>
+              <p>Весь код у вас в репозитории, можно изменять любой блок и стили.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="features" class="section-block section-alt">
+          <div class="section-heading">
+            <span>Возможности</span>
+            <h2>Что уже есть</h2>
+          </div>
+          <div class="features-grid">
+            <div class="feature-item">
+              <h4>Темная тема</h4>
+              <p>Современное оформление из градиентов, минималистичных карточек и четкой типографики.</p>
+            </div>
+            <div class="feature-item">
+              <h4>Мобильная адаптация</h4>
+              <p>Сайт одинаково хорошо смотрится на телефоне, планшете и десктопе.</p>
+            </div>
+            <div class="feature-item">
+              <h4>Страница по нику</h4>
+              <p>Отдельный путь /XAXAXAXAXAXAXAXA/ с тем же оформлением и ссылкой.</p>
+            </div>
+            <div class="feature-item">
+              <h4>Контентная структура</h4>
+              <p>Секции с преимуществами, портфолио и контактами готовы к редактированию.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="work" class="section-block">
+          <div class="section-heading">
+            <span>Портфолио</span>
+            <h2>Примеры блоков</h2>
+          </div>
+          <div class="portfolio-grid">
+            <article class="portfolio-card">
+              <h3>Минимальная страница</h3>
+              <p>Стартовая структура с заголовком, секциями и четкими CTA.</p>
+            </article>
+            <article class="portfolio-card">
+              <h3>Личный профиль</h3>
+              <p>Вставьте сюда информацию о себе, ссылки и контакты.</p>
+            </article>
+            <article class="portfolio-card">
+              <h3>Акценты</h3>
+              <p>Добавляйте карточки, фичи, блоки с преимуществами, галерею или новости.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="contact" class="section-block section-alt">
+          <div class="section-heading">
+            <span>Контакты</span>
+            <h2>Готово к публикации</h2>
+          </div>
+          <div class="contact-grid">
+            <div class="contact-card">
+              <h3>Готовый репозиторий</h3>
+              <p>Изменяй прямо здесь и публикуй через Pages, Netlify или любой хостинг.</p>
+            </div>
+            <div class="contact-card">
+              <h3>Новый маршрут</h3>
+              <p>Страница по нику доступна отдельно через /XAXAXAXAXAXAXAXA/.</p>
+            </div>
+          </div>
         </section>
       </main>
 
-      <footer>
-        <p>XAAXAXAXXAXAXAXAXAXAXAXXXAXAX | Стартовая страница</p>
+      <footer class="footer-bar">
+        <p>XAAXAXAXAXAXAXAXAXAXAXAXXXAXAX — стартовая страница на GitHub</p>
       </footer>
     </div>
   </body>

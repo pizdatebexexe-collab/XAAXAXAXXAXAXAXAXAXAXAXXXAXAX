@@ -4,36 +4,77 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>XAXAXAXAXAXAXAXA</title>
-    <link rel="stylesheet" href="/styles.css" />
+    <link href="/styles.css" rel="stylesheet" />
   </head>
   <body>
-    <div class="page-container">
-      <header>
-        <h1>XAAXAXAXAXAXAXAXA</h1>
-        <p>Добро пожаловать на сайт.</p>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand"><span>XAAXAXAXAXAXAXAXA</span></div>
+        <nav class="site-nav">
+          <a href="/">Главная</a>
+          <a href="#about">О нике</a>
+          <a href="#details">Детали</a>
+        </nav>
       </header>
 
       <main>
-        <section class="hero">
-          <h2>Стартовая страница</h2>
-          <p>
-            Это ваш сайт под ником XAXAXAXAXAXAXAXA. Здесь прямо открывается контент без
-            лишних перенаправлений.
-          </p>
-          <a class="button" href="/">Домой</a>
+        <section class="hero-panel">
+          <div class="hero-copy">
+            <p class="eyebrow">Прямая страница</p>
+            <h1>XAAXAXAXAXAXAXAXA — личный путь</h1>
+            <p>Страница доступна по прямому URL без переходников — это настоящий контент, а не редирект.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="/">На главную</a>
+              <a class="button button-secondary" href="#details">Подробнее</a>
+            </div>
+          </div>
+
+          <div class="hero-card">
+            <div class="hero-card-inner">
+              <span class="card-tag">Ник</span>
+              <h2>Страница для вашего идентификатора</h2>
+              <p>Содержит ту же тему, стили и структуру, что и главная страница, но на собственном пути.</p>
+            </div>
+          </div>
         </section>
 
-        <section>
-          <h3>Что дальше</h3>
-          <p>
-            Можете продолжить редактирование прямо в репозитории: замените текст,
-            добавьте разделы и контент.
-          </p>
+        <section id="about" class="section-block">
+          <div class="section-heading">
+            <span>О странице</span>
+            <h2>Что здесь</h2>
+          </div>
+          <div class="section-grid">
+            <article class="feature-card">
+              <h3>Страница без редиректа</h3>
+              <p>Переход по адресу не ведет на промежуточную страницу — это реальный HTML.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Совместимый дизайн</h3>
+              <p>Шаблон полностью использует shared styles и одинаковую структуру.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="details" class="section-block section-alt">
+          <div class="section-heading">
+            <span>Содержимое</span>
+            <h2>Мои данные и ссылки</h2>
+          </div>
+          <div class="features-grid">
+            <div class="feature-item">
+              <h4>Контакты</h4>
+              <p>Добавь сюда ссылки на соцсети, телеграм или email.</p>
+            </div>
+            <div class="feature-item">
+              <h4>О себе</h4>
+              <p>Краткий блок про опыт, интересы и то, что хочешь показать миру.</p>
+            </div>
+          </div>
         </section>
       </main>
 
-      <footer>
-        <p>XAAXAXAXAXAXAXAXA | Короткая страница с ником</p>
+      <footer class="footer-bar">
+        <p>XAAXAXAXAXAXAXAXA — прямой путь на сайт</p>
       </footer>
     </div>
   </body>
