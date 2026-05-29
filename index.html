@@ -1,200 +1,547 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>XAAXAXAXXAXAXAXAXAXAXAXXXAXAX</title>
-    <meta name="description" content="Персональный сайт с ником, адаптивный интерфейс и красивая тёмная тема." />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="page-shell">
-      <header class="topbar">
-        <div class="brand">
-          <span>XAAXAXAXAXAXAXAXAXAXAXAXXXAXAX</span>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOX || Koska684 / Сами Великодушная? || DEANON</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: #0a0a0a;
+            font-family: 'Courier New', 'Fira Code', 'Monaco', monospace;
+            color: #00ff41;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        /* DOXBIN СТИЛЬ - минималистичный хакерский */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #050505;
+            border: 1px solid #00ff41;
+            box-shadow: 0 0 20px rgba(0,255,65,0.1);
+        }
+        
+        /* ХЕДЕР С ГЛЮЧНОЙ НАДПИСЬЮ */
+        .header {
+            border-bottom: 2px solid #00ff41;
+            padding: 25px;
+            text-align: center;
+            background: #000;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0,255,65,0.1), transparent);
+            animation: scan 8s linear infinite;
+        }
+        
+        @keyframes scan {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+        
+        /* НОВЫЙ КРАСИВЫЙ ШРИФТ ДЛЯ QWATERS И ПАПОЧКА ДЕАНОНА */
+        .glitch-title {
+            font-family: 'Impact', 'Courier New', monospace;
+            font-size: 3.8rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            position: relative;
+            display: inline-block;
+            background: linear-gradient(135deg, #00ff41 0%, #008f23 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: none;
+            animation: glitchText 0.3s infinite alternate;
+        }
+        
+        @keyframes glitchText {
+            0% {
+                text-shadow: -2px 0 #ff0000, 2px 0 #0000ff;
+                transform: skew(0deg);
+            }
+            25% {
+                text-shadow: 2px 0 #ff0000, -2px 0 #0000ff;
+                transform: skew(2deg);
+            }
+            50% {
+                text-shadow: -2px 0 #ff0000, 2px 0 #0000ff;
+                transform: skew(-2deg);
+            }
+            75% {
+                text-shadow: 2px 0 #ff0000, -2px 0 #0000ff;
+                transform: skew(1deg);
+            }
+            100% {
+                text-shadow: -2px 0 #ff0000, 2px 0 #0000ff;
+                transform: skew(0deg);
+            }
+        }
+        
+        .sub-glitch {
+            font-family: 'Courier New', monospace;
+            font-size: 1.2rem;
+            color: #00ff41;
+            letter-spacing: 4px;
+            margin-top: 10px;
+            animation: blink 1.5s step-end infinite;
+        }
+        
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        /* НАВИГАЦИЯ В СТИЛЕ DOXBIN */
+        .nav {
+            background: #000;
+            border-bottom: 1px solid #00ff41;
+            padding: 10px 25px;
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            font-size: 0.9rem;
+        }
+        
+        .nav a {
+            color: #00ff41;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        
+        .nav a:hover {
+            text-decoration: underline;
+            background: #00ff41;
+            color: #000;
+            padding: 0 5px;
+        }
+        
+        /* ОСНОВНОЙ КОНТЕНТ */
+        .content {
+            padding: 25px;
+        }
+        
+        /* СЕКЦИИ В СТИЛЕ DOXBIN */
+        .section {
+            margin-bottom: 30px;
+            border-left: 3px solid #00ff41;
+            padding-left: 20px;
+        }
+        
+        .section-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+            color: #00ff41;
+            border-bottom: 1px dashed #00ff41;
+            display: inline-block;
+        }
+        
+        /* ТАБЛИЦЫ И БЛОКИ ДАННЫХ */
+        .data-block {
+            background: #0a0f0a;
+            padding: 15px;
+            margin: 15px 0;
+            border: 1px solid #1a3a1a;
+            font-family: monospace;
+            font-size: 0.9rem;
+        }
+        
+        .data-line {
+            padding: 5px 0;
+            border-bottom: 1px dotted #1a3a1a;
+        }
+        
+        .data-label {
+            color: #00aa33;
+            display: inline-block;
+            min-width: 180px;
+            font-weight: bold;
+        }
+        
+        .data-value {
+            color: #00ff41;
+            word-break: break-all;
+        }
+        
+        .warning {
+            background: #1a1a00;
+            border: 1px solid #ffff00;
+            color: #ffff00;
+            padding: 15px;
+            margin: 20px 0;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        /* СТИЛЬ ДЛЯ ТЕЛЕФОНОВ И КОНТАКТОВ */
+        .phone {
+            color: #00ff41;
+            font-weight: bold;
+        }
+        
+        .username {
+            color: #00aa33;
+        }
+        
+        /* ССЫЛКИ */
+        .link {
+            color: #00ff41;
+            text-decoration: none;
+        }
+        
+        .link:hover {
+            text-decoration: underline;
+        }
+        
+        /* ФУТЕР */
+        .footer {
+            border-top: 1px solid #00ff41;
+            padding: 15px 25px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #008f23;
+            background: #000;
+        }
+        
+        /* СТАТИСТИКА */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .stat-card {
+            background: #0a0f0a;
+            border: 1px solid #1a3a1a;
+            padding: 10px;
+        }
+        
+        /* ЧАТЫ СПИСОК */
+        .chat-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 8px;
+            font-size: 0.85rem;
+        }
+        
+        .chat-item {
+            padding: 5px;
+            border-left: 2px solid #00ff41;
+            background: #0a0f0a;
+        }
+        
+        /* ASCII АРТ */
+        .ascii {
+            font-family: monospace;
+            white-space: pre;
+            color: #00aa33;
+            font-size: 0.7rem;
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        /* РЕАКЦИЯ ПРИ НАВЕДЕНИИ */
+        .blink-text {
+            animation: blink 1s infinite;
+        }
+        
+        hr {
+            border-color: #1a3a1a;
+        }
+        
+        /* СКРОЛЛ */
+        ::-webkit-scrollbar {
+            width: 8px;
+            background: #000;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #00ff41;
+        }
+        
+        /* МАЛЕНЬКИЙ ГЛИТЧ-ЭФФЕКТ НА ЗАГОЛОВКЕ */
+        @keyframes flicker {
+            0% { opacity: 1; }
+            5% { opacity: 0.8; }
+            10% { opacity: 1; }
+            95% { opacity: 1; }
+            100% { opacity: 1; }
+        }
+        
+        .glitch-title {
+            animation: glitchText 0.3s infinite alternate, flicker 3s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- ХЕДЕР С НОВЫМ ШРИФТОМ -->
+        <div class="header">
+            <div class="glitch-title">
+                DEANON BY QWATERS & ПАПОЧКА ДЕАНОНА
+            </div>
+            <div class="sub-glitch">
+                ⚡ OPERATION: DEANON ACTIVE ⚡
+            </div>
         </div>
-        <nav class="site-nav">
-          <a href="#about">О нас</a>
-          <a href="#features">Фишки</a>
-          <a href="#cases">Кейсы</a>
-          <a href="#faq">FAQ</a>
-          <a href="#contact">Контакты</a>
-        </nav>
-      </header>
-
-      <main>
-        <section class="hero-panel">
-          <div class="hero-copy">
-            <p class="eyebrow">Готовый сайт под ник</p>
-            <h1>Красивый и быстрый сайт без лишнего кода</h1>
-            <p>Готовая статическая страница для вашего никнейма, адаптивная и хорошо структурированная. Настройте её под себя или публикуйте сразу.</p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="#about">Начать сейчас</a>
-              <a class="button button-secondary" href="/XAXAXAXAXAXAXAXA/">Страница по нику</a>
+        
+        <!-- НАВИГАЦИЯ В СТИЛЕ DOXBIN -->
+        <div class="nav">
+            <a href="#">[DOSSIER]</a>
+            <a href="#">[LEAKS]</a>
+            <a href="#">[CONTACTS]</a>
+            <a href="#">[CHATS]</a>
+            <a href="#">[HISTORY]</a>
+            <a href="#">[EXPORT]</a>
+        </div>
+        
+        <div class="content">
+            <!-- ПРЕДУПРЕЖДЕНИЕ -->
+            <div class="warning">
+                ⚠️ CONFIDENTIAL DATA - DEANON BY QWATERS & ПАПОЧКА ДЕАНОНА ⚠️<br>
+                DISTRIBUTION AUTHORIZED - TARGET: @Koska684 / САМИ ВЕЛИКОДУШНАЯ?
             </div>
-          </div>
-          <div class="hero-panel-card">
-            <div class="hero-card-inner">
-              <span class="card-tag">Ник</span>
-              <h2>XAAXAXAXAXAXAXAXA</h2>
-              <p>Прямая страница без промежуточных переходов, с реальным HTML и стилями.</p>
-              <div class="hero-stats">
-                <div class="stat-item">
-                  <strong>100%</strong>
-                  <span>HTML/CSS</span>
+            
+            <!-- ASCII ДЕКОРАЦИЯ -->
+            <div class="ascii">
+    ╔═══════════════════════════════════════════════════════════╗
+    ║  [ TARGET ID: 8542621964 ]  [ STATUS: COMPROMISED ]       ║
+    ║  [ DEANON DATE: 28.05.2026 ]  [ OPERATOR: QWATERS ]       ║
+    ╚═══════════════════════════════════════════════════════════╝
+            </div>
+            
+            <!-- ОСНОВНАЯ ИНФОРМАЦИЯ -->
+            <div class="section">
+                <div class="section-title">📌 BASIC INFORMATION</div>
+                <div class="data-block">
+                    <div class="data-line"><span class="data-label">TG ID:</span><span class="data-value"> 8542621964</span></div>
+                    <div class="data-line"><span class="data-label">Username:</span><span class="data-value"> @Koska684 | @Kaksi0 | @IIIdivisioonassa</span></div>
+                    <div class="data-line"><span class="data-label">Current name:</span><span class="data-value"> Сами Великодушная?</span></div>
+                    <div class="data-line"><span class="data-label">Phone number:</span><span class="data-value phone"> +7 922 833-15-91</span></div>
+                    <div class="data-line"><span class="data-label">Operator:</span><span class="data-value"> Мегафон</span></div>
+                    <div class="data-line"><span class="data-label">Region:</span><span class="data-value"> Оренбургская область</span></div>
+                    <div class="data-line"><span class="data-label">Country:</span><span class="data-value"> Россия</span></div>
+                    <div class="data-line"><span class="data-label">Registration:</span><span class="data-value"> December 2025</span></div>
+                    <div class="data-line"><span class="data-label">Gender/Age:</span><span class="data-value"> Мужчина, 16-25 лет, крупный город (вероятно Москва/СПб)</span></div>
+                    <div class="data-line"><span class="data-label">Location:</span><span class="data-value"> Крупный город (Москва/СПб/Оренбург)</span></div>
                 </div>
-                <div class="stat-item">
-                  <strong>Fast</strong>
-                  <span>Моментальная загрузка</span>
+            </div>
+            
+            <!-- ТЕЛЕФОННЫЕ КНИГИ И СВЯЗИ -->
+            <div class="section">
+                <div class="section-title">📞 PHONE BOOK & CONTACTS</div>
+                <div class="data-block">
+                    <div class="data-line"><span class="data-label">Phone:</span><span class="data-value phone"> 79228331591</span></div>
+                    <div class="data-line"><span class="data-label">Saved as:</span><span class="data-value"> Lena Shebalova, L嗯啊, Лена, лена муха, махмутова алина казанка, Мира, Никогда, Сама 💔, Фик знай кто Щаща, 🌎 Лена</span></div>
+                    <div class="data-line"><span class="data-label">Linked contacts:</span><span class="data-value"> +79228900309, +79228254937, +79991094913, +79991097590</span></div>
                 </div>
-              </div>
             </div>
-          </div>
-        </section>
-
-        <section id="about" class="section-block">
-          <div class="section-heading">
-            <span>О проекте</span>
-            <h2>Страница для ника с живым контентом</h2>
-          </div>
-          <div class="section-grid">
-            <article class="feature-card">
-              <h3>Простой старт</h3>
-              <p>Полный HTML и CSS, который лежит в репозитории и доступен для правок.</p>
-            </article>
-            <article class="feature-card">
-              <h3>Доступ с /XAXAXAXAXAXAXAXA/</h3>
-              <p>Второй путь уже существует прямо в репозитории, это не редирект.</p>
-            </article>
-            <article class="feature-card">
-              <h3>Статическая публикация</h3>
-              <p>Сайт готов к публикации на GitHub Pages или другом статическом хостинге.</p>
-            </article>
-          </div>
-        </section>
-
-        <section id="features" class="section-block section-alt">
-          <div class="section-heading">
-            <span>Возможности</span>
-            <h2>Что уже настроено</h2>
-          </div>
-          <div class="features-grid">
-            <div class="feature-item">
-              <h4>Тёмная тема</h4>
-              <p>Современная стилизация с градиентами и контрастным дизайном.</p>
+            
+            <!-- ЗНАКОМЫЕ -->
+            <div class="section">
+                <div class="section-title">👥 ASSOCIATES / FRIENDS</div>
+                <div class="data-block">
+                    <div class="data-line"><span class="data-label">1.</span><span class="data-value"> ᅠ (@ARZGOD) [8170071878]</span></div>
+                    <div class="data-line"><span class="data-label">2.</span><span class="data-value"> [𝙒𝙓] 𝘿𝙖𝙣𝙚𝙠 [𝑱𝑺] (@Danek_Gift) [8056665234]</span></div>
+                    <div class="data-line"><span class="data-label">3.</span><span class="data-value"> limikkka (@vvivqw) [7706808727]</span></div>
+                    <div class="data-line"><span class="data-label">4.</span><span class="data-value"> Milenka (@milemah) [8565282303]</span></div>
+                </div>
             </div>
-            <div class="feature-item">
-              <h4>Адаптивность</h4>
-              <p>Максимальная работоспособность на любом экране без скриптов.</p>
+            
+            <!-- ИСТОРИЯ ИМЕН -->
+            <div class="section">
+                <div class="section-title">📜 NAME HISTORY</div>
+                <div class="data-block">
+                    <div class="data-line"><span class="data-label">28.05.2026 →</span><span class="data-value"> Сами Великодушная?</span></div>
+                    <div class="data-line"><span class="data-label">23.03.2026 →</span><span class="data-value"> @Koska684</span></div>
+                    <div class="data-line"><span class="data-label">09.03.2026 →</span><span class="data-value"> @ (empty)</span></div>
+                    <div class="data-line"><span class="data-label">07.03.2026 →</span><span class="data-value"> @Koska684, Сами</span></div>
+                    <div class="data-line"><span class="data-label">06.03.2026 →</span><span class="data-value"> @IIIdivisioonassa</span></div>
+                    <div class="data-line"><span class="data-label">28.02.2026 →</span><span class="data-value"> @Kaksi0, 🎶</span></div>
+                    <div class="data-line"><span class="data-label">21.02.2026 →</span><span class="data-value"> @Labnopoki, 🎶</span></div>
+                </div>
             </div>
-            <div class="feature-item">
-              <h4>Карта контента</h4>
-              <p>Чёткие разделы: о проекте, фишки, кейсы, FAQ и контакты.</p>
+            
+            <!-- СВЯЗАННЫЙ УДАЛЕННЫЙ АККАУНТ -->
+            <div class="section">
+                <div class="section-title">⚠️ DELETED ALTERNATE ACCOUNT</div>
+                <div class="data-block">
+                    <div class="data-line"><span class="data-label">ID:</span><span class="data-value"> 8283893639 (DELETED)</span></div>
+                    <div class="data-line"><span class="data-label">Usernames:</span><span class="data-value"> @Miracoub | @Zabute666 | @Zodute | @Lllllllllllll091 | @Dodir0 | @Kira8963 | @Kriner0 | @Mira010102 | @Jeigdt</span></div>
+                    <div class="data-line"><span class="data-label">Names used:</span><span class="data-value"> 🖤 | ,., | Сама 💔 | 𝐒 | ѕ | 𝗦 | S | 🌑 | 𝓢 | Никогда | Мило | 😐 | Как? | , | 🍊 | 🌎 | К+М | kira она моя лп</span></div>
+                    <div class="data-line"><span class="data-label">Messages:</span><span class="data-value"> 1590 messages in 34 chats</span></div>
+                    <div class="data-line"><span class="data-label">Interests:</span><span class="data-value"> "Я обожаю доксы смотреть"</span></div>
+                </div>
             </div>
-            <div class="feature-item">
-              <h4>Чистый код</h4>
-              <p>HTML без мусора и CSS без лишних зависимостей.</p>
+            
+            <!-- ЧАТЫ (ОСНОВНЫЕ) -->
+            <div class="section">
+                <div class="section-title">💬 CHATS (ACTIVE)</div>
+                <div class="chat-list">
+                    <div class="chat-item">Чатик для общения.. (6 msgs)</div>
+                    <div class="chat-item">ЧАТ ОБЩЕНИЕ (51 msgs)</div>
+                    <div class="chat-item">👑Danek ∆ отзывы 👑 (3 msgs)</div>
+                    <div class="chat-item">Ищу Девушку Парня.. (40 msgs)</div>
+                    <div class="chat-item">Tʜᴛᴀɴ Tʀᴏʟʟ Cᕼᴀᴛ (44 msgs)</div>
+                    <div class="chat-item">Ищу парня | Ищу.. (77 msgs)</div>
+                    <div class="chat-item">Вписка чат обще.. (179 msgs)</div>
+                    <div class="chat-item">Ищу девушку парн.. (42 msgs)</div>
+                    <div class="chat-item">Πодкидыши❤ (20 msgs)</div>
+                    <div class="chat-item">взаимные подписk.. (15 msgs)</div>
+                </div>
             </div>
-          </div>
-        </section>
-
-        <section id="cases" class="section-block">
-          <div class="section-heading">
-            <span>Кейсы</span>
-            <h2>Примеры того, что можно сделать</h2>
-          </div>
-          <div class="cases-grid">
-            <article class="case-card">
-              <h3>Персональная страница</h3>
-              <p>Презентуйте себя, контактные данные и сильные стороны в одном месте.</p>
-            </article>
-            <article class="case-card">
-              <h3>Мини-лендинг</h3>
-              <p>Лэндинг с кнопкой призыва, секцией преимуществ и контактной формой.</p>
-            </article>
-            <article class="case-card">
-              <h3>Портфолио</h3>
-              <p>Покажите работы, ссылки и достижения в компактном оформлении.</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section-block section-alt">
-          <div class="two-column-block">
-            <div>
-              <span class="eyebrow">Почему это важно</span>
-              <h2>Что делает такой сайт удобным</h2>
-              <p>Сайт расположен прямо в репозитории, легко редактируется, не привязан к сложному движку.</p>
+            
+            <!-- ГРУППЫ -->
+            <div class="section">
+                <div class="section-title">👥 TELEGRAM GROUPS</div>
+                <div class="data-block">
+                    <div class="data-line"><span class="data-label">•</span><span class="data-value"> @vzaimnyeoe / взаимные подписки тгк</span></div>
+                    <div class="data-line"><span class="data-label">•</span><span class="data-value"> @likes_pr / Взаимные подписки │ реакции</span></div>
+                    <div class="data-line"><span class="data-label">•</span><span class="data-value"> @piar_vz_chat / - 𝙑𝙯𝙖𝙞𝙢𝙣𝙖𝙮𝙖 𝙥𝙤𝙙𝙥𝙞𝙨𝙠𝙖</span></div>
+                    <div class="data-line"><span class="data-label">•</span><span class="data-value"> @naytic5 / 1WIN ОФИЦИАЛЬНЫЙ</span></div>
+                    <div class="data-line"><span class="data-label">•</span><span class="data-value"> @chat_obshcheniee / Группа для общения 💜</span></div>
+                    <div class="data-line"><span class="data-label">•</span><span class="data-value"> @naytie / Ищу Девушку Парня 💕</span></div>
+                    <div class="data-line"><span class="data-label">•</span><span class="data-value"> @vzaimnaya_podpi / Взаимные подписки ❤</span></div>
+                    <div class="data-line"><span class="data-label">•</span><span class="data-value"> @Met_sdgg / Ищу Девушку • Парня</span></div>
+                </div>
             </div>
-            <div class="list-block">
-              <div class="list-card">
-                <strong>Прозрачность</strong>
-                <p>Вы видите весь HTML и CSS сразу.</p>
-              </div>
-              <div class="list-card">
-                <strong>Контроль</strong>
-                <p>Можно быстро поменять текст, цвета или добавить новый раздел.</p>
-              </div>
-              <div class="list-card">
-                <strong>Мощность</strong>
-                <p>Сайт легко хостится на любом статическом сервисе.</p>
-              </div>
+            
+            <!-- СТАТИСТИКА СООБЩЕНИЙ -->
+            <div class="section">
+                <div class="section-title">📊 MESSAGE STATISTICS</div>
+                <div class="stats-grid">
+                    <div class="stat-card">Total messages: 522</div>
+                    <div class="stat-card">Diversity: 38.03%</div>
+                    <div class="stat-card">Replies: 32.18%</div>
+                    <div class="stat-card">Media: 0.96%</div>
+                    <div class="stat-card">Period: 18.02.2026 - present</div>
+                    <div class="stat-card">Favorite chat: ЧАТ ОБЩЕНИЕ</div>
+                </div>
             </div>
-          </div>
-        </section>
-
-        <section id="faq" class="section-block">
-          <div class="section-heading">
-            <span>FAQ</span>
-            <h2>Ответы на вопросы</h2>
-          </div>
-          <div class="faq-grid">
-            <article class="faq-item">
-              <h4>Это реальный HTML?</h4>
-              <p>Да. Вся страница хранится как статический HTML и CSS, без редиректов.</p>
-            </article>
-            <article class="faq-item">
-              <h4>Можно ли изменить содержимое?</h4>
-              <p>Да. Изменяйте любые тексты и стили в репозитории, коммитьте и публикуйте.</p>
-            </article>
-            <article class="faq-item">
-              <h4>Закоротка ссылка сохранится?</h4>
-              <p>Да. Можно сделать новую короткую ссылку на живой адрес без warning.</p>
-            </article>
-          </div>
-        </section>
-
-        <section id="contact" class="section-block section-contact">
-          <div class="contact-panel">
-            <div>
-              <span class="eyebrow">Связаться</span>
-              <h2>Готово к запуску</h2>
-              <p>Добавляй сюда email, соцсети или другую информацию, чтобы сайт стал личным.</p>
+            
+            <!-- ЧАСТО ИСПОЛЬЗУЕМЫЕ СЛОВА -->
+            <div class="section">
+                <div class="section-title">🔤 FREQUENT WORDS</div>
+                <div class="data-block">
+                    <div class="data-line"><span class="data-label">312 uses:</span><span class="data-value"> "312 пожалуиста"</span></div>
+                    <div class="data-line"><span class="data-label">264 uses:</span><span class="data-value"> "312 добавти"</span></div>
+                    <div class="data-line"><span class="data-label">240 uses:</span><span class="data-value"> "общения, активнои"</span></div>
+                    <div class="data-line"><span class="data-label">180 uses:</span><span class="data-value"> "знакомлюсь"</span></div>
+                    <div class="data-line"><span class="data-label">168 uses:</span><span class="data-value"> "добавлю, кружки"</span></div>
+                    <div class="data-line"><span class="data-label">156 uses:</span><span class="data-value"> "поебать"</span></div>
+                    <div class="data-line"><span class="data-label">108 uses:</span><span class="data-value"> "баню"</span></div>
+                </div>
             </div>
-            <div class="contact-card">
-              <div class="contact-detail">
-                <strong>Ссылка:</strong>
-                <span>https://da.gd/bpfb</span>
-              </div>
-              <div class="contact-detail">
-                <strong>Путь:</strong>
-                <span>/XAXAXAXAXAXAXAXA/</span>
-              </div>
-              <div class="contact-detail">
-                <strong>Публикация:</strong>
-                <span>GitHub Pages / статический хостинг</span>
-              </div>
+            
+            <!-- ВОЗРАСТНЫЕ СООБЩЕНИЯ -->
+            <div class="section">
+                <div class="section-title">🎂 AGE CLAIMS (SCREENSHOTS)</div>
+                <div class="data-block">
+                    <div class="data-line"><span class="data-label">18.02.2026:</span><span class="data-value"> "Я девушка меня зовут Мира мне 14 лет А моей рабыне 12"</span></div>
+                    <div class="data-line"><span class="data-label">19.02.2026:</span><span class="data-value"> "Ладно мне 14"</span></div>
+                    <div class="data-line"><span class="data-label">21.02.2026:</span><span class="data-value"> "если что мне 14 и меня зовут Мира" (repeated 8x)</span></div>
+                    <div class="data-line"><span class="data-label">From deleted acc:</span><span class="data-value"> "Меня зовут Мира мне 17 лет", "мне 14", "13 лет"</span></div>
+                </div>
             </div>
-          </div>
-        </section>
-      </main>
-
-      <footer class="footer-bar">
-        <p>XAAXAXAXXAXAXAXAXAXAXAXXXAXAX — статический сайт, восстановленный полностью.</p>
-      </footer>
+            
+            <!-- ТЕМЫ ИНТЕРЕСОВ -->
+            <div class="section">
+                <div class="section-title">🎯 INTERESTS (DOXING RELATED)</div>
+                <div class="data-block">
+                    <div class="data-line"><span class="data-label">•</span><span class="data-value"> Деанон / разоблачение личности (примерно месяц)</span></div>
+                    <div class="data-line"><span class="data-label">•</span><span class="data-value"> Докс / доксинг / dox (примерно месяц)</span></div>
+                    <div class="data-line"><span class="data-label">•</span><span class="data-value"> Roblox, скрипты, читы</span></div>
+                    <div class="data-line"><span class="data-label">•</span><span class="data-value"> Заработок в интернете, рефералы</span></div>
+                    <div class="data-line"><span class="data-value blink-text">🔴 "Я обожаю доксы смотреть" - цитата из удаленного аккаунта 🔴</span></div>
+                </div>
+            </div>
+            
+            <!-- ДОПОЛНИТЕЛЬНАЯ ИНФОРМАЦИЯ -->
+            <div class="section">
+                <div class="section-title">📎 ADDITIONAL INFO</div>
+                <div class="data-block">
+                    <div class="data-line"><span class="data-label">VK:</span><span class="data-value"> Lena Shebalova (12.7.2011)</span></div>
+                    <div class="data-line"><span class="data-label">Other TG:</span><span class="data-value"> @Jeigdt [8283893639] (DELETED)</span></div>
+                    <div class="data-line"><span class="data-label">Gift connections:</span><span class="data-value"> 7706808727, 8170071878, 8056665234</span></div>
+                    <div class="data-line"><span class="data-label">Channels:</span><span class="data-value"> Iris | Подслушано, ♡ hornyvibes, LONTI | Gifts, taro_don, ♠𝔹𝕒𝕤𝕤 𝕡𝕝𝕒𝕪♠</span></div>
+                    <div class="data-line"><span class="data-label">Bio quote:</span><span class="data-value"> "Лол чел я при рости 165 вешу 36;...)"</span></div>
+                </div>
+            </div>
+            
+            <!-- ПРОФИЛЬ -->
+            <div class="section">
+                <div class="section-title">📝 PROFILE SUMMARY</div>
+                <div class="data-block">
+                    Типичный обитатель онлайн-пространства, чья жизнь вращается вокруг виртуальных взаимодействий и симулякров реальности.
+                    Склонен к поиску быстрых и легких путей достижения целей, будь то в играх, заработке или социальном взаимодействии.
+                    Активно ищет подтверждения своей значимости через участие в группах, ориентированных на взаимную активность, что указывает на некоторую неуверенность в себе и потребность во внешнем одобрении.
+                    Проявляет интерес к сфере цифровых развлечений, в частности, к играм, и, возможно, к манипуляциям внутри них (скрипты).
+                    Также прослеживается тяга к легким деньгам и участию в сомнительных схемах, связанных с виртуальными подарками и заработком в Telegram.
+                    Возможна склонность к импульсивным решениям и поиску острых ощущений.
+                    Социальная жизнь, вероятно, ограничена онлайн-средой, где он ищет как развлечений, так и потенциальных знакомств.
+                    Не исключена тенденция к излишней доверчивости к обещаниям легкой наживы или популярности.
+                    Общая картина — человек, находящийся в поиске своего места, активно использующий интернет как инструмент для удовлетворения своих потребностей, зачастую весьма приземленных.
+                </div>
+            </div>
+            
+            <!-- ССЫЛКИ НА ЧАТЫ -->
+            <div class="section">
+                <div class="section-title">🔗 RELATED LINKS</div>
+                <div class="data-block">
+                    <div class="data-line"><span class="data-label">•</span><span class="data-value"><a href="https://t.me/gusrk3677" class="link" target="_blank">t.me/gusrk3677</a></span></div>
+                    <div class="data-line"><span class="data-label">•</span><span class="data-value"><a href="https://t.me/velenhub" class="link" target="_blank">t.me/velenhub</a></span></div>
+                </div>
+            </div>
+            
+            <!-- ФУТЕРНЫЙ ВАРНИНГ -->
+            <div class="warning" style="margin-top: 30px;">
+                🔻 DEANON COMPLETE 🔻<br>
+                DATA PROVIDED BY QWATERS & ПАПОЧКА ДЕАНОНА<br>
+                ACCURACY: 99.97% | STATUS: PUBLIC LEAK
+            </div>
+        </div>
+        
+        <div class="footer">
+            [⚡] DEANON OPERATION || TARGET: Koska684 / Сами Великодушная? || 28.05.2026 || DOX DISTRIBUTION ACTIVE
+        </div>
     </div>
-  </body>
+    
+    <script>
+        // Консольное сообщение
+        console.log("%c[DEANON] QWATERS & ПАПОЧКА ДЕАНОНА", "color: #00ff41; font-size: 16px; font-weight: bold;");
+        console.log("%cTARGET: @Koska684 | ID: 8542621964", "color: #00aa33; font-size: 14px;");
+        console.log("%cDATA LEAK ACTIVE - DOXBIN STYLE", "color: #00ff41;");
+        
+        // Минимальный эффект мерцания заголовка
+        setInterval(() => {
+            const title = document.querySelector('.glitch-title');
+            if(title && Math.random() > 0.95) {
+                title.style.textShadow = '3px 0 red, -3px 0 blue';
+                setTimeout(() => {
+                    title.style.textShadow = '';
+                }, 100);
+            }
+        }, 3000);
+    </script>
+</body>
 </html>
